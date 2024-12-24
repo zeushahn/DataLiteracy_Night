@@ -5,15 +5,6 @@
 
 # 한글 폰트 문제 해결
 
-        # 한글 폰트 문제 해결 
-        # matplotlib은 한글 폰트를 지원하지 않음
-        !sudo apt-get install -y fonts-nanum
-        !sudo fc-cache -fv
-        !rm ~/.cache/matplotlib -rf
+        !pip install koreanize-matplotlib
         
-        import matplotlib.pyplot as plt
-        import matplotlib.font_manager as fm
-        
-        font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
-        font_name = fm.FontProperties(fname=font_path).get_name()
-        plt.rc('font', family=font_name)
+        import koreanize_matplotlib
